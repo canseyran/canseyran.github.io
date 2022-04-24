@@ -1,9 +1,397 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Title of Website</title>
+    <title>Abgabe WAP - Ogulcan Seyran</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <nav>
+      <a href="files/Praesentation/präsentation.pdf"> Slideshow (PDF) </a>
+      &nbsp; <a href="files/"> Dateien </a> &nbsp;
+    </nav>
   </head>
   <body>
-    <p>Coming soon!</p>
+    <div class="maketitle">
+      <h2 class="titleHead">High Dynamic Range Imaging</h2>
+      <div class="author">
+        <span class="cmr-12">Semih Dinc</span> <br /><span class="cmr-12"
+          >Fachbereich Computerwissenschaften</span
+        >
+        <br />
+        <span class="cmr-12">Universit</span><span class="cmr-12">ä</span
+        ><span class="cmr-12">t Salzburg</span> <br />
+        <span class="cmr-12">semih.dinc@stud.sbg.ac.at</span> <br />
+        <br class="and" /><span class="cmr-12">Ogulcan Seyran</span> <br /><span
+          class="cmr-12"
+          >Fachbereich Computerwissenschaften</span
+        >
+        <br />
+        <span class="cmr-12">Universit</span><span class="cmr-12">ä</span
+        ><span class="cmr-12">t Salzburg</span> <br />
+        <span class="cmr-12">ogulcan.seyran@stud.sbg.ac.at</span>
+      </div>
+      <br />
+      <div class="date"></div>
+    </div>
+    <section role="doc-abstract" class="abstract">
+      <h3 class="abstracttitle">
+        <span class="cmbx-10x-x-109">Abstract</span>
+      </h3>
+      <span class="cmti-10x-x-109"
+        >High Dynamic Range Imaging (HDRI) beschreibt den Prozess Bilder mit
+        hohem</span
+      >
+      <span class="cmti-10x-x-109"
+        >Dynamikumfang zu erstellen. Was das nun genau heißt werden wir im
+        Rahmen unserer</span
+      >
+      <span class="cmti-10x-x-109">Arbeit im Detail er</span
+      ><span class="cmti-10x-x-109">ö</span
+      ><span class="cmti-10x-x-109"
+        >rtern. Angefangen mit den Anwendungsgebieten von HDR, der</span
+      >
+      <span class="cmti-10x-x-109"
+        >Bedeutung von Begriﬀen wie ”Dynamikumfang” und ”Dynamikkompression” bis
+        hin</span
+      >
+      <span class="cmti-10x-x-109"
+        >zur Vorstellung von aktuellen HDR Endger</span
+      ><span class="cmti-10x-x-109">ä</span
+      ><span class="cmti-10x-x-109">ten. Dar</span
+      ><span class="cmti-10x-x-109">ü</span
+      ><span class="cmti-10x-x-109">ber hinaus werden auch noch</span>
+      <span class="cmti-10x-x-109"
+        >verschiedene Methoden und einzelne Formate von HDR erkl</span
+      ><span class="cmti-10x-x-109">ä</span
+      ><span class="cmti-10x-x-109">rt und verglichen. </span
+      ><br class="newline" /><span class="cmbxti-10x-x-109">Keywords: </span
+      ><span class="cmti-10x-x-109"
+        >High Dynamik Range Imaging, HDR, Dynamikumfang,</span
+      >
+      <span class="cmti-10x-x-109">Dynamikkompression, Dolby Vison, HDR10 </span
+      ><br class="newline" />
+    </section>
+    <a id="x1-2r1"></a>
+    <h3 class="sectionHead">
+      <span class="titlemark">1 </span> <a id="x1-10001"></a>Einführung
+    </h3>
+    <!--l. 39-->
+    <p class="noindent">
+      Standard Dynamic Range (SDR) Bilder haben im Gegensatz zu HDR Bildern
+      einen geringerem Dynamikumfang, was zu Informationsverlust in sehr hellen
+      sowie sehr dunklen Bereichen eines Bildes führt. Kurzgesagt ist der
+      Dynamikumfang der Unterschied zwischen dem dunkelsten und dem hellsten
+      Bereich eines Fotos, eine genauere Deﬁnition wird im Laufe dieses Artikels
+      geklärt. Dieser fehlende Dynamikumfang stellt für viele Anwendungsgebiete
+      ein Problem da, da dadurch wichtige Informationen eines Bildes verloren
+      gehen können. HDRI bietet verschiedene Methoden, um HDR Bilder zu
+      erstellen, welche abhängig vom Anwendungsfall sind. Durch den höheren
+      Dynamikumfang von HDR ist das Spektrum an Helligkeitsunterschieden eines
+      Bildes viel größer und bietet, wie wir in den nächsten Kapiteln sehen
+      werden, in gewissen Situationen einen größeren Spielraum für die Aufnahme
+      sowie Nutzung von Bildern. Die meisten aktuellen Displaytechnologien sind
+      darauf ausgelegt das Spektrum von SDR anzeigen zu können. Ist der
+      Dynamikumfang noch geringer als bei SDR, spricht man von Low Dynamic
+      Range, dies sind dementsprechend Bilder mit niedrigem Dynamikumfang.
+      <a id="x1-1001r1"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">2 </span> <a id="x1-20002"></a>Anwendungsgebiete
+    </h3>
+    <!--l. 41-->
+    <p class="noindent">
+      HDR Bilder kommen in einigen Bereichen zu Einsatz. In der Computergraﬁk
+      wird HDR verwendet, um künstlich bzw. digital erstellte Objekte
+      realistisch darzustellen, wodurch auch 3D Szenen lebendiger wirken. In
+      bestimmten Bereichen wie der virtuellen Realität ist vor allem die
+      akkurate Wiedergabe von Farben und Lichtern in den Szenen besonders
+      wichtig, um in die Umgebung eintauchen zu können. Ähnlich ist es in der
+      Architektur, hierbei ist es auch besonders wichtig bereits in der Planung
+      realitätsnahe Modelle darzustellen. In der Digitalfotograﬁe wird HDR
+      verwendet um vor allem Szenen mit sehr hellen sowie dunklen Bereichen
+      detailreich darzustellen. Diese daraus entstehenden Bilder bieten außerdem
+      einen viel größeren Spielraum in der Nachbearbeitung, da mehr Details
+      erhalten sind. Im Sicherheitsbereich nutzen Überwachungssysteme HDR, um
+      diese vielseitig nutzbarer zu machen, somit können Szenen mit großen
+      Helligkeitsunterschieden ohne separate Überwachungskameras für die
+      jeweiligen Bereiche überwacht werden. In der Medizin werden besonders
+      kleine Kamerasensorenbenötigt, um dennoch ein detailreiches Resultat zu
+      liefern, müssen diese Sensoren in der Lage sein auch bei schwachen
+      Lichtbedingungen so viel Information wie möglich aufzunehmen.
+      <a id="x1-2001r2"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">3 </span> <a id="x1-30003"></a>Dynamikumfang
+    </h3>
+    <figure class="figure">
+      <a id="x1-3001r1"></a>
+
+      <!--l. 45-->
+      <p class="noindent"><img src="img/dynamikumfang.png" alt="PIC" /></p>
+      <figcaption class="caption">
+        <span class="id">Figure 1:</span
+        ><span class="content"
+          >Dynamikumfang vergleich SDR Kamera und Auge —
+          www.littleowlpictures.de</span
+        >
+      </figcaption>
+      <!--tex4ht:label?: x1-3001r1 -->
+    </figure>
+    <!--l. 48-->
+    <p class="indent">
+      Im Gegensatz zum menschlichen Auge kann sich ein Kamerasensor nur bedingt
+      an unterschiedliche Umgebungshelligkeiten anpassen. Besonders schwierig
+      sind schnelle Wechsel von einem hellen zu einem dunklen Ort. Der Grund
+      dafür ist der beschränkte Dynamikbereich der Technik. Die Reichweite
+      zwischen dem hellsten und dem dunkelsten Bereich eines Motives wird als
+      Dynamikumfang oder kurz Dynamik bezeichnet. Der verteilt sich über maximal
+      23 Blendenstufen von der Dunkelheit der Nacht bis hin zur prallen
+      Mittagssonne. Das menschliche Auge kann ungefähr 20 dieser Blendenstufen
+      erfassen. Bezogen auf die Fotograﬁe, haben qualitativ hochwertige und
+      moderne Kameras einen Dynamikumfang von 9 bis 12 Blendenstufen. Ältere
+      Modelle verfügen nur über 8 Blendenstufen. Der Dynamikumfang einer
+      Aufnahme ist umso höher, je mehr Helligkeitsabstufungen ein Motiv hat. Je
+      grösser die Dynamik, desto mehr Details sind erkennbar. Je kleiner der
+      Dynamikbereich ist, desto detailärmer wird das Bild. Das Objekt
+      verschwimmt dann mit dem Bildhintergrund. Wenn der mögliche Dynamikbereich
+      von einer Kamera überschritten wird, gehen die darüber hinaus liegenden
+      Bildinformationen verloren. Häuﬁg ist es dann so, dass bei Aufnahmen in
+      der Natur mit Menschen im Vordergrund aufgrund eines kleinen
+      Dynamikbereichs entweder ein überbelichteter Himmel oder überbelichtete
+      Gesichter entstehen. Dann kann man sich den Dynamikumfang auch ausrechnen
+      und zwar mit Hilfe von Lichtstopps. Lichtstopps besagen wie viel Licht
+      verarbeitet wird. Plus ein f-Stopp halbiert und minus ein f-Stopp
+      verdoppelt die Menge an Licht. Der Dynamikumfang lässt sich dann berechnen
+      mit 2 hoch den f-stopps. Die Zahl repräsentiert dann das Verhältnis
+      zwischen dem hellsten und dunkelsten punkt des Bildes. Also wenn es 1 zu 2
+      wäre, dann hätte man eben nur schwarz und weiß. Eine sehr gute Kamera kann
+      ein Verhältnis von 1 zu 130.000 aufbringen, das Menschliche Auge ein
+      Verhältnis von ca. 1 zu 1.000.000.
+      <a id="x1-3002r3"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">4 </span> <a id="x1-40004"></a>Dynamikkompression
+    </h3>
+    <!--l. 54-->
+    <p class="noindent">
+      Umgangssprachlich werden nämlich meistens HDR-Bilder dann als solche
+      bezeichnet, nachdem man sie am Computer mit HDR-Programmen so bearbeitet
+      hat, dass sie so aussehen wie man die Szene auch live gesehen hat.
+      Tatsächlich handelt es sich aber um dynamikkomprimierte Bilder, die zwar
+      mehr Zeichnung aufweisen, die aber real keinen höheren Kontrast abbilden.
+      Echte HDR-Bilder weisen hingegen einen zu hohen Kontrast auf, der auf
+      normalen Monitoren nicht mehr vollständig darstellbar ist, deswegen muss
+      man sie zum Betrachten erst noch entwickeln. Diese Entwicklung nennt man
+      Dynamikkompression. Aus einem HDR wird dadurch ein SDR (Standard Dynamic
+      Range) oder LDR (Low Dynamic Range).
+      <a id="x1-4001r5"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">5 </span> <a id="x1-50005"></a>HDR Endgeräte
+    </h3>
+    <!--l. 56-->
+    <p class="noindent">
+      Dann Gibt es auch HDR Endgeräte die HDR auch eher gerecht werden. Diese
+      sind in der Lage weitaus Höhere Dynamische Bereiche darzustellen. Sie
+      haben auch eine viel hellere Darstellung und je heller der Bildschirm
+      desto mehr Dynamik kann er eben wiedergeben.
+      <a id="x1-5001r6"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">6 </span> <a id="x1-60006"></a>Methoden
+    </h3>
+    <a id="x1-6001r1"></a>
+    <h4 class="subsectionHead">
+      <span class="titlemark">6.1 </span> <a id="x1-70001"></a>HDR Sensoren
+    </h4>
+    <figure class="figure">
+      <a id="x1-7001r2"></a>
+
+      <!--l. 61-->
+      <p class="noindent"><img src="img/hdrcsensor.jpg" alt="PIC" /></p>
+      <figcaption class="caption">
+        <span class="id">Figure 2:</span
+        ><span class="content">HDRC-Sensor — www.degruyter.com</span>
+      </figcaption>
+      <!--tex4ht:label?: x1-7001r2 -->
+    </figure>
+    <!--l. 64-->
+    <p class="indent">
+      Digitale Bildsensoren mit hohem Dynamikumfang sind noch in der
+      Entwicklung. Solche Sensoren sind besonders gut für Überwachungssysteme
+      sowie für Anwendungen im Straßenverkehr geeignet. Im Gegensatz zu
+      herkömmlichen Bildsensoren sind diese besonders leistungsfähig unter
+      extremen Lichtbedingungen, da diese keine lineare Funktion der
+      Lichtintensität nutzen, sondern eine logarithmische Funktion um dem
+      menschlichen Auge zu gleichen.
+      <a id="x1-7002r8"></a>
+    </p>
+    <h4 class="subsectionHead">
+      <span class="titlemark">6.2 </span> <a id="x1-80002"></a>Belichtungsreihen
+    </h4>
+    <figure class="figure">
+      <a id="x1-8001r3"></a>
+
+      <!--l. 68-->
+      <p class="noindent"><img src="img/belichtungsreihen.jpg" alt="PIC" /></p>
+      <figcaption class="caption">
+        <span class="id">Figure 3:</span
+        ><span class="content">Belichtungsreihe — www.traumﬂieger.de</span>
+      </figcaption>
+      <!--tex4ht:label?: x1-8001r3 -->
+    </figure>
+    <!--l. 71-->
+    <p class="indent">
+      Bei einer Belichtungsreihe werden Bilder mit unterschiedlicher Belichtung
+      aufgenommen. Dies dient dazu, um mittels der Kombination dieser Bilder
+      alle Helligkeitsbereiche abzudecken. Somit können kontrastreiche Szenen
+      detailreich abgebildet werden. Bei der Aufnahme von nicht statischen
+      Objekten, so wie einer nicht ﬁxierten Kamera können so genannte
+      Geisterbilder entstehen. Darunter versteht man meist schwach sichtbare,
+      meist weniger leuchtstarke Objekte in einem Bild. In der Digitalfotograﬁe
+      ist es zwar bis zu einem gewissen Grad möglich solche Bereiche zu
+      retuschieren, jedoch stellt dies aktuell noch ein Problem für
+      Belichtungsreihen da. Grundsätzlich geht man von mindestens drei
+      aufzunehmenden Bildern aus, um ein entsprechendes HDR Bild zu erstellen,
+      je nach Anwendungsfall und Gerät können hierbei größere Belichtungsreihen
+      genutzt werden. Moderne Geräte liefern meist bereits Softwarelösungen, um
+      das Aufnehmen solcher Belichtungsreihen zu erleichtern. Das nachträgliche
+      Zusammenfügen dieser Bilder kann mittels unzähligen Bildbearbeitungstools
+      problemlos durchgeführt werden.
+      <a id="x1-8002r10"></a>
+    </p>
+    <h4 class="subsectionHead">
+      <span class="titlemark">6.3 </span> <a id="x1-90003"></a>HDR Rendering
+    </h4>
+    <!--l. 73-->
+    <p class="noindent">
+      High Dynamic Range Rendering (HDDR) bezeichnet die Bildsynthese unter
+      Berücksichtigung von natürlichen Kontrastbereichen. HDDR wird seit
+      längerem bereits als Technologie für Computerspiele genutzt, um 3D Objekte
+      im Spiel dynamisch an von der Szene gegebenen Lichtbedingungen anzupassen.
+      Da Texturen und 3D Objekte mit hohem Dynamikumfang gerendert werden,
+      beinhalten diese im unteren sowie oberen Teil des Spektrums mehr
+      Information. Da HDR Endgeräte erst in den letzten Jahren für die große
+      Masse entwickelt und produziert wurden, stellte sich die Frage wie man HDR
+      Szenen bestmöglich auf SDR Geräten darstellen kann.Mittels Tone Mapping
+      wird der Dynamikumfang eines Bildes verringert, um auf SDR Geräten
+      darstellbar zu sein. Da das Ziel von Tone Mapping ist, so viel Information
+      wie möglich im Bild beizubehalten, während man das Bild in das SDR
+      Spektrum komprimiert, werden hierbei viel bessere Ergebnisse erzielt, da
+      der Dynamikbereich an eine bestimmte Szene angepasst werden kann.
+      <a id="x1-9001r7"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">7 </span> <a id="x1-100007"></a>Formate
+    </h3>
+    <a id="x1-10001r12"></a>
+    <h4 class="subsectionHead">
+      <span class="titlemark">7.1 </span> <a id="x1-110001"></a>Kompression
+    </h4>
+    <!--l. 76-->
+    <p class="noindent">
+      Die Kompression dient ja, zur Reduzierung von Datenmengen indem redundante
+      Informationen beseitigt werden. Der Vorgang reduziert dadurch die
+      Bandbreite die benötigt wird, um Daten zu übertragen und vermindert den
+      notwendigen Speicherplatz. Allgemein kann jeder Datentyp komprimiert
+      werden, beispielsweise Video- und Audiodaten. Man unterscheidet
+      Grundsätzlich zwischen verlustbehaftete und Verlustfreie Kompression.
+      Videomaterial beispielsweise eignet sich nicht für die verlustfreie
+      Kompression. Der Grund dafür ist, dass es selten genug lange Lauﬂängen von
+      einem Pixelwert gibt, um den maximalen Wirkungsgrad zu erzielen. Deswegen
+      handelt es sich bei Videomaterial meistens um eine verlustbehaftete
+      Kompression. Bei der verlustbehafteten Kompression ist das
+      wiederhergestellte Bild nur eine ähnliche Wiedergabe vom Original. Wenn
+      ein verlustbehaftetes Bild reproduziert wird, werden nicht alle Daten vom
+      Bild genauso wiederhergestellt, wie sie mal waren. Um den sichtbaren
+      Verlust zu reduzieren, komprimieren die Kompressionsverfahren eher die
+      Bereiche, die vom menschlichen Auge weniger oder schlechter wahrgenommen
+      werden. Das menschliche Auge reagiert zum Beispiel sensibler auf
+      wechselnde Lichtverhältnisse oder Helligkeit, als auf Farbwechsel, also
+      Farbton und Sättigung und innerhalb der Farbskala ist das Auge
+      empﬁndlicher für den Gelb-Grün-Blauen Bereich als auf andere Bereiche.
+      Zwei häuﬁg verwendete Kompressionsverfahren sind hierbei JPEG und MPEG.
+      Die verlustfreie Kompression zeichnet sich hingegen durch die komplette
+      Wiederherstellung aller ursprünglicher Daten die eben im Originalbild
+      enthalten waren aus. In der visuellen Welt eignet sich die Kompression
+      besonders für Bilder, die große Mengen an wiederholt enthaltenen
+      Informationen beinhaltet, wie beispielsweise ein blauer Himmel. Hierbei
+      enthält das Bild eine große Fläche derselben Farbinformation, nämlich
+      Blau. Die verlustfreie Kodierung entfernt so gut es geht Bereiche mit
+      gleichen Farben. Das Verfahren ist aber zum Beispiel bei digitalen Videos
+      nicht sehr eﬀektiv, da die Farben in diesen Bildern meistens durch
+      Verwischen dargestellt werden und nur wenige Bereiche ﬂächige Farben
+      enthalten. Umgesetzt wird das oft mit der variablen Längenkodierung.
+      Hierbei werden Daten mit einer festen Bitrate durch Symbole mit einer
+      variablen Anzahl an Bits ersetzt. Die Häuﬁgkeit von wiederkehrenden
+      Symbolen ist also relevant für die Kompression. Ein Beispiel wäre die
+      Huﬀman-Kodierung. Die verschiedenen Formate unterscheiden sich jetzt
+      Hauptsächlich in der Kodierung, wie vorher erwähnt in der Kompressionsart
+      und in Farb- und Helligkeitswerten.
+      <a id="x1-11001r14"></a>
+    </p>
+    <h4 class="subsectionHead">
+      <span class="titlemark">7.2 </span> <a id="x1-120002"></a>HDR10
+    </h4>
+    <!--l. 82-->
+    <p class="noindent">
+      Betrachten wir nun ein paar Beispiele für Video-Formate. Und zwar gibt es
+      momentan zwei große HDR-formate in der Medienbranche, nämlich HDR10 und
+      Dolby-Vision. Das Format HDR10 ist Ende 2015 vorgestellt worden und wird
+      unter anderem von Sony, Samsung und LG genutzt. Wenn von HDR die Rede ist,
+      wird auch meisten das Format HDR10 gemeint. Der Standard nutzt den
+      Farbraum BT.2020 in Verbindung mit einer Farbtiefe von 10 Bit und ist ein
+      oﬀener Standard.
+      <a id="x1-12001r15"></a>
+    </p>
+    <h4 class="subsectionHead">
+      <span class="titlemark">7.3 </span> <a id="x1-130003"></a>Dolby Vision
+    </h4>
+    <!--l. 85-->
+    <p class="noindent">
+      Dolby Vision, von Dolby Laboratories, ist ein Format was ähnlich zum
+      HDR10-Format ist, also ein alternativer Standard für HDR-Videos. Das
+      Format wird beispielsweise von der Ultra High Deﬁnition Blu-ray
+      unterstützt und auch Video-On-Demand Plattformen wie Netﬂix und Amazon
+      Video nutzen es für einige Inhalte. Es unterstützt sowohl High Dynamic
+      Range als auch die Farbräume ITUR BT.2020 und BT.2100. Und zwar das auf
+      allen Stufen, also von der Produktion der Inhalte bis hin zur Übertragung
+      und Wiedergabe. Das Format unterstützt Bildschirme mit bis zu 10.000 Nits
+      maximaler Helligkeit. Es bietet auch eine Auﬂösung von bis zu 4K und eine
+      Farbtiefe von bis zu 12 Bit (abwärtskompatibel mit aktuellen 8 Bit und 10
+      Bit Monitoren). Die HDR-Lösung von Dolby geht über die von HDR10 weit
+      hinaus. Dolby Vision arbeitet mit 12 Bit und ist aber im Gegensatz zu
+      HDR10 kostenpﬂichtig. Dazu kommen dann auch Unterschiede bei der
+      Übertragung, nämlich arbeitet HDR10 mit statischen Metadaten und die
+      Zusatzinformationen von Dolby Vision sind dynamisch. Die Darstellung von
+      Nachtaufnahmen oder Tageslicht können dadurch gezielt optimiert werden,
+      wobei bei HDR10 ein Kompromiss für das gesamte Video gefunden werden muss.
+      <a id="x1-13001r13"></a>
+    </p>
+    <h3 class="sectionHead">
+      <span class="titlemark">8 </span> <a id="x1-140008"></a>Konklusion
+    </h3>
+    <!--l. 87-->
+    <p class="noindent">
+      Damit konkludieren wir unseren Beitrag über das High Dynamik Range
+      Imaging. Im Rahmen unserer Arbeit, haben wir ihnen die verschiedenen
+      Anwendungsgebiete, so wie einige der wichtigsten Kennwörter des HDR
+      Imaging‘s, wie zum Beispiel ”Dynamikumfang” und ”Dynamikkompression”,
+      nähergebracht. Zusätzlich wurden HDR Endgeräte behandelt und drei
+      verschiedene Methoden beschrieben, welche diese hernehmen. Zum Abschluss
+      haben wir einige verschiedenen Formate von HDR vorgeführt, wobei stark die
+      2 Videoformate HDR10 und Dolby Vision behandelt wurden.
+    </p>
+    <h3 class="likesectionHead"><a id="x1-150008"></a>List of Figures</h3>
+    <div class="tableofcontents">
+      <span class="lofToc"
+        >1 <a href="#x1-3001r1"
+          >Dynamikumfang vergleich SDR Kamera und Auge —
+          www.littleowlpictures.de</a
+        ></span
+      ><br /><span class="lofToc"
+        >2 <a href="#x1-7001r2">HDRC-Sensor — www.degruyter.com</a></span
+      ><br /><span class="lofToc"
+        >3 <a href="#x1-8001r3">Belichtungsreihe — www.traumﬂieger.de</a></span
+      ><br />
+    </div>
   </body>
 </html>
